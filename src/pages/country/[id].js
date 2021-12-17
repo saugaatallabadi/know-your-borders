@@ -3,9 +3,10 @@ import Layout from "../../components/Layout/Layout";
 import styles from "./Country.module.css";
 
 const getCountry = async (id) => {
-  const res = await fetch(`https://restcountries.eu/rest/v2/alpha/${id}`);
+  const res = await fetch(`https://restcountries.com/v2/alpha/${id}`);
 
   const country = await res.json();
+  // console.log(country);
 
   return country;
 };
@@ -25,7 +26,7 @@ const Country = ({ country }) => {
     getBorders();
   }, []);
 
-  console.log(borders);
+  // console.log(borders);
 
   return (
     <Layout title={country.name}>
@@ -96,7 +97,7 @@ const Country = ({ country }) => {
 
               <div className={styles.details_panel_borders_container}>
                 {borders.map(({ flag, name }) => (
-                  <div className={styles.details_panel_borders_country}>
+                  <div className={styles.details_panel_borders_country} key={name}>
                     <img src={flag} alt={name}></img>
 
                     <div className={styles.details_panel_borders_name}>
@@ -116,7 +117,7 @@ const Country = ({ country }) => {
 export default Country;
 
 export const getStaticPaths = async () => {
-  const res = await fetch("https://restcountries.eu/rest/v2/all");
+  const res = await fetch("https://restcountries.com/v2/all");
   const countries = await res.json();
 
   const paths = countries.map((country) => ({
