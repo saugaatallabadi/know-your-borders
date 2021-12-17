@@ -12,14 +12,16 @@ const getCountry = async (id) => {
 };
 
 const Country = ({ country }) => {
-  const [borders, setBorders] = useState([]);
+  const [bordersz, setBorders] = useState([]);
 
   const getBorders = async () => {
-    const borders = await Promise.all(
-      country.borders.map((border) => getCountry(border))
-    );
-
-    setBorders(borders);
+    const bordersz = await Promise.all(
+      country.borders && country.borders.map((border) => getCountry(border))
+    )
+      .catch((err) =>
+        console.log(err)
+      );
+    setBorders(bordersz);
   };
 
   useEffect(() => {
@@ -74,7 +76,7 @@ const Country = ({ country }) => {
             <div className={styles.details_panel_row}>
               <div className={styles.details_panel_label}>Currencies</div>
               <div className={styles.details_panel_value}>
-                {country.currencies.map(({ name }) => name).join(", ")}
+                {country.currencies?.map(({ name }) => name).join(", ")}
               </div>
             </div>
 
@@ -96,7 +98,7 @@ const Country = ({ country }) => {
               </div>
 
               <div className={styles.details_panel_borders_container}>
-                {borders.map(({ flag, name }) => (
+                {bordersz?.map(({ flag, name }) => (
                   <div className={styles.details_panel_borders_country} key={name}>
                     <img src={flag} alt={name}></img>
 
