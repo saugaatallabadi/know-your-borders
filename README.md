@@ -3,7 +3,7 @@ Write a short sentence or two about this project and what it does. Be sure to in
 
 **Link to project:** https://know-your-borders.vercel.app
 
-![alt tag](http://placecorgi.com/1200/650)
+![logo](https://raw.githubusercontent.com/saugaatallabadi/know-your-borders/main/public/earth.png)
 
 ## How It's Made:
 
