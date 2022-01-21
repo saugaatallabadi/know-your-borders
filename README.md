@@ -7,23 +7,12 @@ A web application built on NextJS, giving a list of all countries in the world w
 
 ![logo](https://raw.githubusercontent.com/saugaatallabadi/know-your-borders/main/public/earth.png)
 
-## How It's Made:
+## 🏗 How It's Made
 
-**Tech used:** HTML, CSS, JavaScript, NextJS
-
-
-## Lessons Learned:
-
-📖 This project taught me about:
-
-- Data sorting, filtering
-- Responsive Layout without any CSS framework
-- Dark/Light Mode
-- Server-side rendering
-- Deploying with Vercel
+**Tech used:** HTML, CSS, JavaScript, NextJS, Rest APIs
 
 
-## Getting Started
+## 🏁 Getting Started
 
 After you clone/fork the above repository from Github-
 Install all node dependencies:
