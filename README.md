@@ -1,7 +1,7 @@
 # Know Your Borders
 A web application built on NextJS, giving a list of all countries in the world with some stats on each.
 
-**Link to article:** [https://www.saugaatallabadi.com/frontend-in-2-days/](https://www.saugaatallabadi.com/frontend-in-2-days/)
+**Link to article:** [https://www.saugaatallabadi.com/how-i-built-a-web-application-in-2-days/](https://www.saugaatallabadi.com/how-i-built-a-web-application-in-2-days/)
 
 **Link to project:** https://know-your-borders.vercel.app
 
